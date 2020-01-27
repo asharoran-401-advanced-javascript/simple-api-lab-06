@@ -1,0 +1,56 @@
+{
+  "categories": [
+    {
+      "name": "jeans",
+      "display_name": "fashin jeans",
+      "description": "our jeans is amazing",
+      "_id": 1
+    },
+    {
+      "name": "T-sharts",
+      "display_name": "fashin t-sharet",
+      "description": "our shartes is amazing",
+      "_id": 2
+    },
+    {
+      "name": "clothing",
+      "display_name": "summer-clothing",
+      "description": "our clothing is cool",
+      "_id": 3
+    },
+    {
+      "name": "clothing",
+      "display_name": "winter-clothing",
+      "description": "our clothing is amazing",
+      "_id": 4
+    },
+    {
+      "name": "shoe",
+      "diplay_name": "sport shoes",
+      "description": "our shoes is coll too",
+      "_id": 6
+    },
+    {
+      "name": "hates",
+      "display_name": "fashin hates",
+      "description": "our hates is amazing",
+      "_id": 7
+    }
+  ],
+  "products": [
+    {
+      "category": "gussi",
+      "name": "clothing",
+      "display_name": "summer clothing",
+      "description": "our clothing is cool",
+      "_id": 1
+    },
+    {
+      "category": "shoes",
+      "name": "nike-shoe",
+      "display_name": "sport shoe",
+      "description": "our shoe is amazing",
+      "_id": 3
+    }
+  ]
+}

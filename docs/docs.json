@@ -1,0 +1,217 @@
+{
+    "swagger" : "2.0",
+    "info" : {
+      "description" : "my cool application",
+      "version" : "0.1",
+      "title" : "Simple API"
+    },
+    "paths" : {
+      "/categories" : {
+        "get" : {
+          "produces" : [ "application/json" ],
+          "parameters" : [ ],
+          "responses" : {
+            "200" : {
+              "description" : "to get the database",
+              "schema" : {
+                "$ref" : "#/definitions/Model4"
+              }
+            }
+          }
+        },
+        "post" : {
+          "consumes" : [ "application/json" ],
+          "produces" : [ "application/json" ],
+          "parameters" : [ {
+            "in" : "body",
+            "name" : "body",
+            "required" : false,
+            "schema" : {
+              "$ref" : "#/definitions/Model2"
+            },
+            "x-examples" : {
+              "application/json" : "{ \"name\": \"hates\",\n        \"display_name\": \"fashin hates\",\n        \"description\": \"our hates is amazing\",\n        \"_id\": 7\n}"
+            }
+          } ],
+          "responses" : {
+            "201" : {
+              "description" : "to add a new categories",
+              "schema" : {
+                "$ref" : "#/definitions/Model3"
+              }
+            }
+          }
+        }
+      },
+      "/products/1" : {
+        "put" : {
+          "consumes" : [ "application/json" ],
+          "produces" : [ "application/json" ],
+          "parameters" : [ {
+            "in" : "body",
+            "name" : "body",
+            "required" : false,
+            "schema" : {
+              "$ref" : "#/definitions/Model0"
+            },
+            "x-examples" : {
+              "application/json" : "{\n        \"category\": \"gussi\",\n        \"name\": \"clothing\",\n        \"display_name\": \"summer clothing\",\n        \"description\": \"our clothing is cool\",\n        \"_id\": 1\n    }"
+            }
+          } ],
+          "responses" : {
+            "200" : {
+              "description" : "to edit the data in id product id 1",
+              "schema" : {
+                "$ref" : "#/definitions/Model5"
+              }
+            }
+          }
+        }
+      },
+      "/products/2" : {
+        "delete" : {
+          "consumes" : [ "application/json" ],
+          "produces" : [ "application/json" ],
+          "parameters" : [ {
+            "in" : "body",
+            "name" : "body",
+            "required" : false,
+            "schema" : {
+              "$ref" : "#/definitions/Model1"
+            },
+            "x-examples" : {
+              "application/json" : "{\n        \"category\": \"gussi\",\n        \"name\": \"clothing\",\n        \"display_name\": \"summer clothing\",\n        \"description\": \"our clothing is cool\",\n        \"_id\": 1\n    }"
+            }
+          } ],
+          "responses" : {
+            "200" : {
+              "description" : "to delete product data in id 2",
+              "schema" : {
+                "$ref" : "#/definitions/Model6"
+              }
+            }
+          }
+        }
+      }
+    },
+    "definitions" : {
+      "Model0" : {
+        "properties" : {
+          "category" : {
+            "type" : "string"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "display_name" : {
+            "type" : "string"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "_id" : {
+            "type" : "integer",
+            "format" : "int32"
+          }
+        }
+      },
+      "Model1" : {
+        "properties" : {
+          "category" : {
+            "type" : "string"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "display_name" : {
+            "type" : "string"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "_id" : {
+            "type" : "integer",
+            "format" : "int32"
+          }
+        }
+      },
+      "Model2" : {
+        "properties" : {
+          "name" : {
+            "type" : "string"
+          },
+          "display_name" : {
+            "type" : "string"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "_id" : {
+            "type" : "integer",
+            "format" : "int32"
+          }
+        }
+      },
+      "Model3" : {
+        "properties" : {
+          "name" : {
+            "type" : "string"
+          },
+          "display_name" : {
+            "type" : "string"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "_id" : {
+            "type" : "integer",
+            "format" : "int32"
+          }
+        }
+      },
+      "Array" : {
+        "properties" : {
+          "name" : {
+            "type" : "string"
+          },
+          "display_name" : {
+            "type" : "string"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "_id" : {
+            "type" : "integer",
+            "format" : "int32"
+          }
+        }
+      },
+      "Model4" : {
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/definitions/Array"
+        }
+      },
+      "Model5" : {
+        "properties" : {
+          "category" : {
+            "type" : "string"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "display_name" : {
+            "type" : "string"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "_id" : {
+            "type" : "integer",
+            "format" : "int32"
+          }
+        }
+      },
+      "Model6" : { }
+    }
+  }
